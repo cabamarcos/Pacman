@@ -21,11 +21,9 @@ from __future__ import division
 # purposes. The Pacman AI projects were developed at UC Berkeley, primarily by
 # John DeNero (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
 
-from future import standard_library
-standard_library.install_aliases()
 from builtins import str
 from builtins import range
-from past.utils import old_div
+from compatibility import old_div
 from builtins import object
 from util import *
 import time, os

@@ -18,7 +18,7 @@ from builtins import map
 from builtins import zip
 from builtins import range
 from builtins import object
-from past.utils import old_div
+from compatibility import old_div
 from graphicsUtils import *
 import math, time
 from game import Directions

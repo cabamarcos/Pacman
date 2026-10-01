@@ -26,7 +26,7 @@ from builtins import zip
 from builtins import str
 from builtins import range
 from builtins import object
-from past.utils import old_div
+from compatibility import old_div
 from game import GameStateData
 from game import Game
 from game import Directions
@@ -90,8 +90,6 @@ class GameState(object):
     ####################################################
     # Accessor methods: use these to access state data #
     ####################################################
-    ghostDirections = {}
-
     def getLegalActions( self, agentIndex=0 ):
         """
         Returns the legal actions for the agent specified.
@@ -138,10 +136,10 @@ class GameState(object):
         state.data.score += state.data.scoreChange
         p = state.getPacmanPosition()
         state.data.ghostDistances = [getNoisyDistance(p, state.getGhostPosition(i)) for i in range(1,state.getNumAgents())]
-        state.ghostPositions = self.ghostPositions = [self.getGhostPosition(i) for i in range(1, self.getNumAgents())]
+        state.ghostPositions = [state.getGhostPosition(i) for i in range(1, state.getNumAgents())]
         a = 0
         for i in range(1, self.getNumAgents()):
-            self.ghostDirections[a] = (state.data.agentStates[i].configuration.getDirection())
+            state.ghostDirections[a] = (state.data.agentStates[i].configuration.getDirection())
             a += 1
         if agentIndex == self.getNumAgents() - 1:
             state.numMoves += 1
@@ -254,7 +252,7 @@ class GameState(object):
         self.livingGhosts[index] = False
 
     def isLose( self ):
-        return self.maxMoves > 0 and self.numMoves >= self.maxMoves
+        return not self.isWin() and self.maxMoves > 0 and self.numMoves >= self.maxMoves
 
     def isWin( self ):
         return self.livingGhosts.count(True) == 0
@@ -278,6 +276,7 @@ class GameState(object):
             self.data = GameStateData(prevState.data)
             self.livingGhosts = prevState.livingGhosts[:]
             self.ghostPositions = prevState.ghostPositions[:]
+            self.ghostDirections = prevState.ghostDirections.copy()
             self.numMoves = prevState.numMoves;
             self.maxMoves = prevState.maxMoves;
         else: # Initial state
@@ -285,11 +284,12 @@ class GameState(object):
             self.numMoves = 0;
             self.maxMoves = -1;
             self.data.ghostDistances = []
+            self.ghostDirections = {}
 
     def deepCopy( self ):
         state = GameState( self )
         state.data = self.data.deepCopy()
-        state.data.ghostDistances = self.data.ghostDistances
+        state.data.ghostDistances = self.data.ghostDistances[:]
         return state
 
     def __eq__( self, other ):
@@ -315,9 +315,10 @@ class GameState(object):
         Creates an initial game state from a layout array (see layout.py).
         """
         self.data.initialize(layout, numGhostAgents)
-        self.livingGhosts = [False] + [True for i in range(numGhostAgents)]
+        self.livingGhosts = [False] + [True for i in range(self.getNumAgents() - 1)]
         self.data.ghostDistances = [getNoisyDistance(self.getPacmanPosition(), self.getGhostPosition(i)) for i in range(1, self.getNumAgents())]
         self.ghostPositions = [self.getGhostPosition(i) for i in range(1, self.getNumAgents())]
+        self.ghostDirections = {i - 1: self.getGhostDirection(i) for i in range(1, self.getNumAgents())}
 
     def getGhostPosition( self, agentIndex ):
         if agentIndex == 0:

@@ -15,7 +15,7 @@ from __future__ import division
 
 
 from builtins import zip
-from past.utils import old_div
+from compatibility import old_div
 from game import Agent
 from game import Actions
 from game import Directions

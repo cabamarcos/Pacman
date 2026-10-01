@@ -14,15 +14,12 @@ from __future__ import division
 # Pieter Abbeel (pabbeel@cs.berkeley.edu).
 
 
-from future import standard_library
-standard_library.install_aliases()
 from builtins import input
 from builtins import zip
 from builtins import str
 from builtins import range
-from past.utils import old_div
+from compatibility import old_div
 from builtins import object
-from future.utils import raise_
 import sys
 import inspect
 import heapq, random
@@ -580,7 +577,7 @@ def lookup(name, namespace):
         options += [obj[1] for obj in list(namespace.items()) if obj[0] == name ]
         if len(options) == 1: return options[0]
         if len(options) > 1: raise Exception('Name conflict for %s')
-        raise_(Exception, '%s not found as a method or class' % name)
+        raise Exception('%s not found as a method or class' % name)
 
 def pause():
     """
