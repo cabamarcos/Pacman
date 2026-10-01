@@ -4,7 +4,7 @@
 
 Python 3.10+ · biblioteca estándar · tres mapas · modelos guardados · benchmark reproducible
 
-Este repositorio llegó como material inicial de **Aprendizaje Automático de 3.º de la UC3M**. La asignatura cambió de proyectos y este no llegó a formar parte de los trabajos de aquel curso escolar. En octubre de 2026 se desarrolló esta extensión personal sobre el motor recibido: agentes, entrenamiento, evaluación y una demo de trayectorias. No se presenta como una práctica realizada durante el grado.
+Proyecto de aprendizaje por refuerzo basado en material previsto para **Aprendizaje Automático de 3.º de la UC3M**. La asignatura cambió de proyectos y este no llegó a formar parte de los trabajos de aquel curso escolar. Incluye agentes, entrenamiento, evaluación y una demo de trayectorias.
 
 ## Qué hace
 
@@ -123,8 +123,8 @@ El motor recibido se ha adaptado para funcionar con Python 3 sin `python-future`
 
 ## Procedencia y condiciones del material
 
-El motor y los ejercicios iniciales proceden de los [Pacman AI Projects de UC Berkeley](https://ai.berkeley.edu/tracking.html), desarrollados principalmente por John DeNero y Dan Klein, con aportaciones de Brad Miller, Nick Hay y Pieter Abbeel. El material recibido contiene adaptaciones asociadas a la UC3M y su grupo de Planificación y Aprendizaje.
+El motor y los ejercicios iniciales proceden de los [Pacman AI Projects de UC Berkeley](https://www-inst.eecs.berkeley.edu/~cs188/pacman/project_overview.html), desarrollados principalmente por John DeNero y Dan Klein, con aportaciones de Brad Miller, Nick Hay y Pieter Abbeel. El material recibido contiene adaptaciones asociadas a la UC3M y su grupo de Planificación y Aprendizaje.
 
-Se conservan los avisos originales de atribución y uso educativo. Sus condiciones incluyen no distribuir ni publicar soluciones: **este repositorio conserva su visibilidad privada**. No se ha añadido una licencia general que cambie esas condiciones. Los ejercicios de inferencia originales siguen como material inicial; la extensión de navegación observable vive en módulos nuevos.
+Se conservan los avisos originales de atribución y uso educativo, incluida la condición de no distribuir ni publicar soluciones de los ejercicios originales. No se ha añadido una licencia general que cambie esas condiciones. Los ejercicios de inferencia originales siguen como material inicial; la extensión de navegación observable vive en módulos nuevos.
 
-Forma parte del [catálogo de proyectos académicos](https://github.com/cabamarcos/academic-projects), donde se identifica expresamente como desarrollo personal posterior a partir de material de la asignatura.
+Forma parte del [catálogo de proyectos académicos](https://github.com/cabamarcos/academic-projects), en Aprendizaje Automático de 3.º, con la nota de que no entró entre los proyectos de aquel curso escolar.
