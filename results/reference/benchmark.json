@@ -1,0 +1,304 @@
+{
+  "protocol": {
+    "episodes_per_run": 3000,
+    "run_seeds": [
+      11,
+      29,
+      47
+    ],
+    "test_games_per_maze": 30,
+    "max_moves": 120,
+    "test_seed_base": 1000000,
+    "mazes": {
+      "room": [
+        "%%%%%%%%%",
+        "%       %",
+        "%       %",
+        "%       %",
+        "%       %",
+        "%       %",
+        "%%%%%%%%%",
+        "% % %%%%%",
+        "%%%%%%%%%"
+      ],
+      "corridors": [
+        "%%%%%%%%%",
+        "%       %",
+        "% %%% % %",
+        "%   %   %",
+        "% % %%% %",
+        "%       %",
+        "%%%%%%%%%",
+        "% % %%%%%",
+        "%%%%%%%%%"
+      ],
+      "detour": [
+        "%%%%%%%%%",
+        "%       %",
+        "% %%%%% %",
+        "% %   % %",
+        "% % % % %",
+        "%   %   %",
+        "%%%%%%%%%",
+        "% % %%%%%",
+        "%%%%%%%%%"
+      ]
+    }
+  },
+  "models": [
+    {
+      "path": "models\\q-seed-11.json",
+      "sha256": "4c51f88ff42385b02e90043ee3cc3e7040c92243f4ea3723f78efd3bba00e66f"
+    },
+    {
+      "path": "models\\q-seed-29.json",
+      "sha256": "331f4f6595735a29ba8a70319cd913e375dc928c1f82f661848f5936abbedf6f"
+    },
+    {
+      "path": "models\\q-seed-47.json",
+      "sha256": "a916adb4173a9abf485e8f01a2291e52fd26c6ab6db9cf140384cb93869e7558"
+    }
+  ],
+  "summary": {
+    "random": {
+      "games": 270,
+      "wins": 169,
+      "win_rate": 0.6259259259259259,
+      "mean_moves": 82.24444444444444,
+      "mean_captures": 1.5222222222222221,
+      "mean_score": 222.2
+    },
+    "untrained_q": {
+      "games": 270,
+      "wins": 169,
+      "win_rate": 0.6259259259259259,
+      "mean_moves": 82.24444444444444,
+      "mean_captures": 1.5222222222222221,
+      "mean_score": 222.2
+    },
+    "q_learning": {
+      "games": 270,
+      "wins": 268,
+      "win_rate": 0.9925925925925926,
+      "mean_moves": 9.592592592592593,
+      "mean_captures": 1.9925925925925927,
+      "mean_score": 388.9259259259259
+    },
+    "greedy_bfs": {
+      "games": 270,
+      "wins": 270,
+      "win_rate": 1,
+      "mean_moves": 8.544444444444444,
+      "mean_captures": 2,
+      "mean_score": 391.4555555555556
+    }
+  },
+  "per_run": {
+    "11": {
+      "random": {
+        "games": 90,
+        "wins": 51,
+        "win_rate": 0.5666666666666667,
+        "mean_moves": 84.95555555555555,
+        "mean_captures": 1.4222222222222223,
+        "mean_score": 199.48888888888888
+      },
+      "untrained_q": {
+        "games": 90,
+        "wins": 51,
+        "win_rate": 0.5666666666666667,
+        "mean_moves": 84.95555555555555,
+        "mean_captures": 1.4222222222222223,
+        "mean_score": 199.48888888888888
+      },
+      "q_learning": {
+        "games": 90,
+        "wins": 89,
+        "win_rate": 0.9888888888888889,
+        "mean_moves": 9.933333333333334,
+        "mean_captures": 1.988888888888889,
+        "mean_score": 387.84444444444443
+      },
+      "greedy_bfs": {
+        "games": 90,
+        "wins": 90,
+        "win_rate": 1,
+        "mean_moves": 8.544444444444444,
+        "mean_captures": 2,
+        "mean_score": 391.4555555555556
+      }
+    },
+    "29": {
+      "random": {
+        "games": 90,
+        "wins": 52,
+        "win_rate": 0.5777777777777777,
+        "mean_moves": 85.55555555555556,
+        "mean_captures": 1.4666666666666666,
+        "mean_score": 207.77777777777777
+      },
+      "untrained_q": {
+        "games": 90,
+        "wins": 52,
+        "win_rate": 0.5777777777777777,
+        "mean_moves": 85.55555555555556,
+        "mean_captures": 1.4666666666666666,
+        "mean_score": 207.77777777777777
+      },
+      "q_learning": {
+        "games": 90,
+        "wins": 90,
+        "win_rate": 1,
+        "mean_moves": 8.866666666666667,
+        "mean_captures": 2,
+        "mean_score": 391.1333333333333
+      },
+      "greedy_bfs": {
+        "games": 90,
+        "wins": 90,
+        "win_rate": 1,
+        "mean_moves": 8.544444444444444,
+        "mean_captures": 2,
+        "mean_score": 391.4555555555556
+      }
+    },
+    "47": {
+      "random": {
+        "games": 90,
+        "wins": 66,
+        "win_rate": 0.7333333333333333,
+        "mean_moves": 76.22222222222223,
+        "mean_captures": 1.6777777777777778,
+        "mean_score": 259.3333333333333
+      },
+      "untrained_q": {
+        "games": 90,
+        "wins": 66,
+        "win_rate": 0.7333333333333333,
+        "mean_moves": 76.22222222222223,
+        "mean_captures": 1.6777777777777778,
+        "mean_score": 259.3333333333333
+      },
+      "q_learning": {
+        "games": 90,
+        "wins": 89,
+        "win_rate": 0.9888888888888889,
+        "mean_moves": 9.977777777777778,
+        "mean_captures": 1.988888888888889,
+        "mean_score": 387.8
+      },
+      "greedy_bfs": {
+        "games": 90,
+        "wins": 90,
+        "win_rate": 1,
+        "mean_moves": 8.544444444444444,
+        "mean_captures": 2,
+        "mean_score": 391.4555555555556
+      }
+    }
+  },
+  "per_maze": {
+    "room": {
+      "random": {
+        "games": 90,
+        "wins": 60,
+        "win_rate": 0.6666666666666666,
+        "mean_moves": 75.25555555555556,
+        "mean_captures": 1.6,
+        "mean_score": 244.74444444444444
+      },
+      "untrained_q": {
+        "games": 90,
+        "wins": 60,
+        "win_rate": 0.6666666666666666,
+        "mean_moves": 75.25555555555556,
+        "mean_captures": 1.6,
+        "mean_score": 244.74444444444444
+      },
+      "q_learning": {
+        "games": 90,
+        "wins": 90,
+        "win_rate": 1,
+        "mean_moves": 6.644444444444445,
+        "mean_captures": 2,
+        "mean_score": 393.35555555555555
+      },
+      "greedy_bfs": {
+        "games": 90,
+        "wins": 90,
+        "win_rate": 1,
+        "mean_moves": 6.4,
+        "mean_captures": 2,
+        "mean_score": 393.6
+      }
+    },
+    "corridors": {
+      "random": {
+        "games": 90,
+        "wins": 61,
+        "win_rate": 0.6777777777777778,
+        "mean_moves": 78.06666666666666,
+        "mean_captures": 1.6,
+        "mean_score": 241.93333333333334
+      },
+      "untrained_q": {
+        "games": 90,
+        "wins": 61,
+        "win_rate": 0.6777777777777778,
+        "mean_moves": 78.06666666666666,
+        "mean_captures": 1.6,
+        "mean_score": 241.93333333333334
+      },
+      "q_learning": {
+        "games": 90,
+        "wins": 90,
+        "win_rate": 1,
+        "mean_moves": 9.677777777777777,
+        "mean_captures": 2,
+        "mean_score": 390.3222222222222
+      },
+      "greedy_bfs": {
+        "games": 90,
+        "wins": 90,
+        "win_rate": 1,
+        "mean_moves": 9.4,
+        "mean_captures": 2,
+        "mean_score": 390.6
+      }
+    },
+    "detour": {
+      "random": {
+        "games": 90,
+        "wins": 48,
+        "win_rate": 0.5333333333333333,
+        "mean_moves": 93.41111111111111,
+        "mean_captures": 1.3666666666666667,
+        "mean_score": 179.92222222222222
+      },
+      "untrained_q": {
+        "games": 90,
+        "wins": 48,
+        "win_rate": 0.5333333333333333,
+        "mean_moves": 93.41111111111111,
+        "mean_captures": 1.3666666666666667,
+        "mean_score": 179.92222222222222
+      },
+      "q_learning": {
+        "games": 90,
+        "wins": 88,
+        "win_rate": 0.9777777777777777,
+        "mean_moves": 12.455555555555556,
+        "mean_captures": 1.9777777777777779,
+        "mean_score": 383.1
+      },
+      "greedy_bfs": {
+        "games": 90,
+        "wins": 90,
+        "win_rate": 1,
+        "mean_moves": 9.833333333333334,
+        "mean_captures": 2,
+        "mean_score": 390.1666666666667
+      }
+    }
+  }
+}
