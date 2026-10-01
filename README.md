@@ -4,7 +4,7 @@
 
 Python 3.10+ · biblioteca estándar · tres mapas · modelos guardados · benchmark reproducible
 
-Este repositorio llegó como material inicial de **Aprendizaje Automático de la UC3M**. La asignatura cambió de proyectos y aquel material no se utilizó como entrega. En octubre de 2026 se desarrolló esta extensión personal sobre el motor recibido: agentes, entrenamiento, evaluación y una demo de trayectorias. No se presenta como una práctica realizada durante el grado.
+Este repositorio llegó como material inicial de **Aprendizaje Automático de 3.º de la UC3M**. La asignatura cambió de proyectos y este no llegó a formar parte de los trabajos de aquel curso escolar. En octubre de 2026 se desarrolló esta extensión personal sobre el motor recibido: agentes, entrenamiento, evaluación y una demo de trayectorias. No se presenta como una práctica realizada durante el grado.
 
 ## Qué hace
 
